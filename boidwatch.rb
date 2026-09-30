@@ -5,21 +5,21 @@
 class Boidwatch < Formula
   desc "Public HTTPS-only CLI for Boidwatch — drive synthetic-agent runs from the terminal or an LLM agent harness."
   homepage "https://boidwatch.com"
-  version "1.0.0"
+  version "1.1.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/boidwatch/cli/releases/download/v1.0.0/boidwatch_1.0.0_darwin_x86_64.tar.gz"
-      sha256 "13c810c5df6639d56196daf5fe145f174824b0236d0455188134e6656a7d9027"
+      url "https://github.com/boidwatch/cli/releases/download/v1.1.0/boidwatch_1.1.0_darwin_x86_64.tar.gz"
+      sha256 "9ff4ab839720a0e4ef7c4c8f84ccbf0e773839828b87fa37adc5c7944d601f1d"
 
       define_method(:install) do
         bin.install "boidwatch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/boidwatch/cli/releases/download/v1.0.0/boidwatch_1.0.0_darwin_arm64.tar.gz"
-      sha256 "ea3bfdb1b2cfb6c3bd75fe52469322183c8f72d6afe441f1ad2c094a3053c454"
+      url "https://github.com/boidwatch/cli/releases/download/v1.1.0/boidwatch_1.1.0_darwin_arm64.tar.gz"
+      sha256 "d22ac0f57828240d2d6c3f6c957f145bdb62c13400b7980a1c508c73bdf82852"
 
       define_method(:install) do
         bin.install "boidwatch"
@@ -29,15 +29,15 @@ class Boidwatch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boidwatch/cli/releases/download/v1.0.0/boidwatch_1.0.0_linux_x86_64.tar.gz"
-      sha256 "96c22ffa3eb352f939048462ef3dbc8161cc9d232b03d891d1dc0c46c6306ba7"
+      url "https://github.com/boidwatch/cli/releases/download/v1.1.0/boidwatch_1.1.0_linux_x86_64.tar.gz"
+      sha256 "f7abaf416be8fc98070875d69ef753c918a85daec7c5b3a5aaf157a02a43975a"
       define_method(:install) do
         bin.install "boidwatch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boidwatch/cli/releases/download/v1.0.0/boidwatch_1.0.0_linux_arm64.tar.gz"
-      sha256 "0d8bea2dd087aeded5acaf6c61a69962654576f6ccb52ebe0eda91f5843b4383"
+      url "https://github.com/boidwatch/cli/releases/download/v1.1.0/boidwatch_1.1.0_linux_arm64.tar.gz"
+      sha256 "797ba5fe9416541b56e0c3ffe07ef1198f6c50f525a14a3714ac68fe13116c29"
       define_method(:install) do
         bin.install "boidwatch"
       end
